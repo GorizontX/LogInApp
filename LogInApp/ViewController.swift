@@ -8,14 +8,14 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     // MARK: - ID Actions
     
     @IBAction func logInTapped(_ sender: Any) {
@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     
     // MARK: - Alert Controllers
-   
+    
     
     @IBAction func forgotButtonTappef(_ sender: UIButton) {
         sender.tag == 0
@@ -31,15 +31,13 @@ class ViewController: UIViewController {
         : setUpAlertController(titel: "That is not cute 😐", message: "Your password is 13579, please remember it.")
     }
     
-
+    
     
     // MARK: - Privat Methods
-
-    private func setUpAlertController (titel: String, message: String, textField: UITextField? = nil) {
+    
+    private func setUpAlertController (titel: String, message: String) {
         let alertController = UIAlertController(title: titel, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default) { _ in
-            textField?.text = ""
-        }
+        let action = UIAlertAction(title: "OK", style: .default)
         
         alertController.addAction(action)
         self.present(alertController, animated: true)
