@@ -36,6 +36,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <action selector="logInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P2k-Vk-ahi"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="jwi-ZK-9BP">
                                 <rect key="frame" x="30" y="516" width="370" height="30"/>
@@ -46,16 +49,16 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot your Name?"/>
                                         <connections>
-                                            <action selector="forgotNameTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2I-JL-1tA"/>
+                                            <action selector="forgotButtonTappef:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bli-cq-SXe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kx-yH-Q62">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kx-yH-Q62">
                                         <rect key="frame" x="190.66666666666663" y="0.0" width="179.33333333333337" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Forgot Password?"/>
                                         <connections>
-                                            <action selector="forgotPasswordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJW-s2-0qU"/>
+                                            <action selector="forgotButtonTappef:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Mv-j7-hpB"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -74,6 +77,10 @@
                             <constraint firstItem="jwi-ZK-9BP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="u0c-mm-zCs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="U4h-1x-eof" id="bj2-RM-gYb"/>
+                        <outlet property="userNameTextField" destination="ozi-Fc-3zL" id="R4j-sU-Hwg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

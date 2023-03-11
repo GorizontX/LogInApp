@@ -9,30 +9,41 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var userNameTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    // MARK: - ID Actions
     
-    @IBAction func forgotNameTapped(_ sender: Any) {
-        let alertController = UIAlertController(title: "It's so cute 🥰", message: "You forgot your name. Check your passport 😉", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default)
+    @IBAction func logInTapped(_ sender: Any) {
+    }
+    
+    
+    // MARK: - Alert Controllers
+   
+    
+    @IBAction func forgotButtonTappef(_ sender: UIButton) {
+        sender.tag == 0
+        ? setUpAlertController(titel: "It's so cute 🥰", message: "You forgot your name. You are Andrey")
+        : setUpAlertController(titel: "That is not cute 😐", message: "Your password is 13579, please remember it.")
+    }
+    
+
+    
+    // MARK: - Privat Methods
+
+    private func setUpAlertController (titel: String, message: String, textField: UITextField? = nil) {
+        let alertController = UIAlertController(title: titel, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default) { _ in
+            textField?.text = ""
+        }
         
         alertController.addAction(action)
         self.present(alertController, animated: true)
-        
     }
-    
-    @IBAction func forgotPasswordTapped(_ sender: Any) {
-        let alertController = UIAlertController(title: "That is not cute 😐", message: "Your password is 13579, please remember it.", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default)
-        
-        alertController.addAction(action)
-        self.present(alertController, animated: true)
-        
-    }
-    
     
     
 }
