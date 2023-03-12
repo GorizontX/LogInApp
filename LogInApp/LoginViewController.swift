@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     private let userName = "Andrey"
+    private let password = "13579"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,14 +29,20 @@ class LoginViewController: UIViewController {
     @IBAction func logInTapped(_ sender: Any) {
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        guard let _ = segue.source as? WelcomeViewController else { return }
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     
     // MARK: - Alert Controllers
     
     
     @IBAction func forgotButtonTappef(_ sender: UIButton) {
         sender.tag == 0
-        ? setUpAlertController(titel: "It's so cute 🥰", message: "You forgot your name. You are Andrey")
-        : setUpAlertController(titel: "That is not cute 😐", message: "Your password is 13579, please remember it.")
+        ? setUpAlertController(titel: "It's so cute 🥰", message: "You forgot your name. You are \(userName)")
+        : setUpAlertController(titel: "That is not cute 😐", message: "Your password is \(password), please remember it.")
     }
     
     

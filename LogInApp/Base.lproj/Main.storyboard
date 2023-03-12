@@ -103,7 +103,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="logoutTapped" destination="EDh-Rj-b1s" eventType="touchUpInside" id="SqZ-s0-yT5"/>
+                                    <segue destination="PCA-Su-qBg" kind="unwind" unwindAction="unwindFor:" id="yp9-kR-b4g"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lb5-Dz-wps">
@@ -140,6 +140,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0Y-bS-ASI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="PCA-Su-qBg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="812.09302325581393" y="3.8626609442060089"/>
         </scene>
