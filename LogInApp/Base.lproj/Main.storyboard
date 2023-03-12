@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LogInApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LogInApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,20 +87,58 @@
             </objects>
             <point key="canvasLocation" x="4.1860465116279073" y="3.8626609442060089"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="dX5-0g-fw5">
             <objects>
-                <viewController id="EDh-Rj-b1s" sceneMemberID="viewController">
+                <viewController id="EDh-Rj-b1s" customClass="WelcomeViewController" customModule="LogInApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xta-UA-DIb">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkY-Me-PzC">
+                                <rect key="frame" x="120" y="747" width="190" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutTapped" destination="EDh-Rj-b1s" eventType="touchUpInside" id="SqZ-s0-yT5"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lb5-Dz-wps">
+                                <rect key="frame" x="70" y="228.99999999999997" width="290" height="122.66666666666666"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-PH-Jve">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="25.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEY-5e-Jg8">
+                                        <rect key="frame" x="0.0" y="65.333333333333314" width="290" height="57.333333333333343"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="l3a-L9-EVs"/>
                         <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="l3a-L9-EVs" firstAttribute="bottom" secondItem="BkY-Me-PzC" secondAttribute="bottom" constant="100" id="HMS-By-4lt"/>
+                            <constraint firstItem="lb5-Dz-wps" firstAttribute="top" secondItem="l3a-L9-EVs" secondAttribute="top" constant="170" id="Mo0-rg-bHm"/>
+                            <constraint firstItem="lb5-Dz-wps" firstAttribute="leading" secondItem="l3a-L9-EVs" secondAttribute="leading" constant="70" id="O9V-4C-IzS"/>
+                            <constraint firstItem="l3a-L9-EVs" firstAttribute="trailing" secondItem="lb5-Dz-wps" secondAttribute="trailing" constant="70" id="bfK-vF-ttO"/>
+                            <constraint firstItem="l3a-L9-EVs" firstAttribute="trailing" secondItem="BkY-Me-PzC" secondAttribute="trailing" constant="120" id="fBc-7g-S1Q"/>
+                            <constraint firstItem="BkY-Me-PzC" firstAttribute="leading" secondItem="l3a-L9-EVs" secondAttribute="leading" constant="120" id="ka6-xe-N8I"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0Y-bS-ASI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="4"/>
+            <point key="canvasLocation" x="812.09302325581393" y="3.8626609442060089"/>
         </scene>
     </scenes>
     <resources>
