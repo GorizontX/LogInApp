@@ -8,7 +8,6 @@
 import UIKit
 
 class WelcomeViewController: UIViewController {
-
     
     @IBOutlet var welcomeLabel: UILabel!
     
@@ -18,8 +17,5 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         welcomeLabel.text = helloLabel
     }
-    
-    
-
     
 }

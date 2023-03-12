@@ -14,15 +14,11 @@ class LoginViewController: UIViewController {
     
     private let userName = "Andrey"
     private let password = "13579"
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+        
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
     }
+    
     
     // MARK: - Prepare for Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -30,10 +26,14 @@ class LoginViewController: UIViewController {
         welcomeVC.helloLabel = "Welcome, \(userNameTextField.text ?? "")"
     }
     
+    
     // MARK: - ID Actions
     @IBAction func logInTapped(_ sender: Any) {
         guard userNameTextField.text == userName, passwordTextField.text == password else {
-            setUpAlertController(titel: "No No No", message: "Chack your Name or Password")
+            setUpAlertController(
+                titel: "No No No",
+                message: "Chack your Name or Password"
+            )
             passwordTextField.text = ""
             return
         }
@@ -58,7 +58,6 @@ class LoginViewController: UIViewController {
             message: "Your password is \(password), please remember it."
         )
     }
-    
     
     
     // MARK: - Privat Methods
