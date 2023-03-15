@@ -14,21 +14,18 @@ class LoginViewController: UIViewController {
     
     private let userName = "Andrey"
     private let password = "13579"
-    let a: Double = 1
-    let b: Bool = true
     
     
     // MARK: - Override Functions
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
         welcomeVC.user = "Welcome, \(userNameTextField.text ?? "")"
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
+    }
     
     // MARK: - ID Actions
     @IBAction func logInTapped(_ sender: Any) {
@@ -69,6 +66,7 @@ class LoginViewController: UIViewController {
         alertController.addAction(action)
         present(alertController, animated: true)
     }
+    
     
     
 }

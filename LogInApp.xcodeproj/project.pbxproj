@@ -14,6 +14,7 @@
 		571B5A7F29BB8A8700DA155E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571B5A7E29BB8A8700DA155E /* Assets.xcassets */; };
 		571B5A8229BB8A8700DA155E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 571B5A8029BB8A8700DA155E /* LaunchScreen.storyboard */; };
 		571B5A8A29BD1B0100DA155E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B5A8929BD1B0100DA155E /* WelcomeViewController.swift */; };
+		5747D8E029C289550021B18B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747D8DF29C289550021B18B /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		571B5A8129BB8A8700DA155E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		571B5A8329BB8A8700DA155E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		571B5A8929BD1B0100DA155E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		5747D8DF29C289550021B18B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		571B5A7429BB8A8600DA155E /* LogInApp */ = {
 			isa = PBXGroup;
 			children = (
-				571B5A7529BB8A8600DA155E /* AppDelegate.swift */,
-				571B5A7729BB8A8600DA155E /* SceneDelegate.swift */,
-				571B5A7929BB8A8600DA155E /* LoginViewController.swift */,
-				571B5A8929BD1B0100DA155E /* WelcomeViewController.swift */,
-				571B5A7B29BB8A8600DA155E /* Main.storyboard */,
-				571B5A7E29BB8A8700DA155E /* Assets.xcassets */,
-				571B5A8029BB8A8700DA155E /* LaunchScreen.storyboard */,
-				571B5A8329BB8A8700DA155E /* Info.plist */,
+				5747D8DB29C284FE0021B18B /* ViewControllers */,
+				5747D8DC29C2854C0021B18B /* Storyboards */,
+				5747D8DE29C285920021B18B /* Models */,
+				5747D8DA29C284E80021B18B /* App */,
+				5747D8DD29C2855F0021B18B /* Resourses */,
 			);
 			path = LogInApp;
+			sourceTree = "<group>";
+		};
+		5747D8DA29C284E80021B18B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				571B5A7529BB8A8600DA155E /* AppDelegate.swift */,
+				571B5A7729BB8A8600DA155E /* SceneDelegate.swift */,
+				571B5A8329BB8A8700DA155E /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		5747D8DB29C284FE0021B18B /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				571B5A7929BB8A8600DA155E /* LoginViewController.swift */,
+				571B5A8929BD1B0100DA155E /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5747D8DC29C2854C0021B18B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				571B5A7B29BB8A8600DA155E /* Main.storyboard */,
+				571B5A8029BB8A8700DA155E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5747D8DD29C2855F0021B18B /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				571B5A7E29BB8A8700DA155E /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		5747D8DE29C285920021B18B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5747D8DF29C289550021B18B /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +187,7 @@
 				571B5A7A29BB8A8600DA155E /* LoginViewController.swift in Sources */,
 				571B5A8A29BD1B0100DA155E /* WelcomeViewController.swift in Sources */,
 				571B5A7629BB8A8600DA155E /* AppDelegate.swift in Sources */,
+				5747D8E029C289550021B18B /* User.swift in Sources */,
 				571B5A7829BB8A8600DA155E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,6 +335,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GK8CJZB3Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LogInApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -318,6 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GK8CJZB3Z;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LogInApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
