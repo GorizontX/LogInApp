@@ -12,15 +12,15 @@ class LoginViewController: UIViewController {
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let userName = "Andrey"
-    private let password = "13579"
+    private let user = User.getUser()
     
     
     // MARK: - Override Functions
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = userName
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.user = user.person.welcomeMessame
+//     
+//    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -29,7 +29,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - ID Actions
     @IBAction func logInTapped(_ sender: Any) {
-        guard userNameTextField.text == userName, passwordTextField.text == password else {
+        guard userNameTextField.text == user.userName, passwordTextField.text == user.password else {
             setUpAlertController(
                 titel: "No No No",
                 message: "Check your Name or Password",
@@ -48,11 +48,11 @@ class LoginViewController: UIViewController {
         sender.tag == 0
         ? setUpAlertController(
             titel: "It's so cute 🥰",
-            message: "You forgot your name. You are \(userName)"
+            message: "You forgot your name. You are \(user.userName)"
         )
         : setUpAlertController(
             titel: "That is not cute 😐",
-            message: "Your password is \(password), please remember it."
+            message: "Your password is \(user.password), please remember it."
         )
     }
     

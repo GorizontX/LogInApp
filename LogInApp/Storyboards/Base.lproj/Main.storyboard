@@ -80,14 +80,14 @@
                     <connections>
                         <outlet property="passwordTextField" destination="U4h-1x-eof" id="bj2-RM-gYb"/>
                         <outlet property="userNameTextField" destination="ozi-Fc-3zL" id="R4j-sU-Hwg"/>
-                        <segue destination="EDh-Rj-b1s" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="zo4-Ff-oS1"/>
+                        <segue destination="tUb-o5-PUw" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="zo4-Ff-oS1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4.1860465116279073" y="3.8626609442060089"/>
+            <point key="canvasLocation" x="379" y="44"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Welcome-->
         <scene sceneID="dX5-0g-fw5">
             <objects>
                 <viewController id="EDh-Rj-b1s" customClass="WelcomeViewController" customModule="LogInApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BkY-Me-PzC">
-                                <rect key="frame" x="120" y="417" width="80" height="51"/>
+                                <rect key="frame" x="120" y="368" width="80" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log Out">
@@ -107,16 +107,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="lb5-Dz-wps">
-                                <rect key="frame" x="70" y="170" width="180" height="123"/>
+                                <rect key="frame" x="16" y="170" width="288" height="123"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTV-PH-Jve">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="25.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="25.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEY-5e-Jg8">
-                                        <rect key="frame" x="0.0" y="65.5" width="180" height="57.5"/>
+                                        <rect key="frame" x="0.0" y="65.5" width="288" height="57.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -129,12 +129,13 @@
                         <constraints>
                             <constraint firstItem="l3a-L9-EVs" firstAttribute="bottom" secondItem="BkY-Me-PzC" secondAttribute="bottom" constant="100" id="HMS-By-4lt"/>
                             <constraint firstItem="lb5-Dz-wps" firstAttribute="top" secondItem="l3a-L9-EVs" secondAttribute="top" constant="170" id="Mo0-rg-bHm"/>
-                            <constraint firstItem="lb5-Dz-wps" firstAttribute="leading" secondItem="l3a-L9-EVs" secondAttribute="leading" constant="70" id="O9V-4C-IzS"/>
-                            <constraint firstItem="l3a-L9-EVs" firstAttribute="trailing" secondItem="lb5-Dz-wps" secondAttribute="trailing" constant="70" id="bfK-vF-ttO"/>
+                            <constraint firstItem="lb5-Dz-wps" firstAttribute="leading" secondItem="l3a-L9-EVs" secondAttribute="leading" constant="16" id="O9V-4C-IzS"/>
+                            <constraint firstItem="l3a-L9-EVs" firstAttribute="trailing" secondItem="lb5-Dz-wps" secondAttribute="trailing" constant="16" id="bfK-vF-ttO"/>
                             <constraint firstItem="l3a-L9-EVs" firstAttribute="trailing" secondItem="BkY-Me-PzC" secondAttribute="trailing" constant="120" id="fBc-7g-S1Q"/>
                             <constraint firstItem="BkY-Me-PzC" firstAttribute="leading" secondItem="l3a-L9-EVs" secondAttribute="leading" constant="120" id="ka6-xe-N8I"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="sun.min.fill" catalog="system" id="51P-mb-VHJ"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="RTV-PH-Jve" id="Id8-Eg-CMW"/>
                     </connections>
@@ -142,10 +143,88 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t0Y-bS-ASI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="PCA-Su-qBg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="812.09302325581393" y="3.8626609442060089"/>
+            <point key="canvasLocation" x="812" y="846"/>
+        </scene>
+        <!--Andrey Machulin-->
+        <scene sceneID="998-io-EAX">
+            <objects>
+                <viewController id="eNJ-9Y-YwN" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gjg-Q1-Snf">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="UVw-1y-4E2">
+                                <rect key="frame" x="16" y="112.5" width="288" height="386.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Dif-C7-9Rd">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="181.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohG-kl-iop">
+                                        <rect key="frame" x="0.0" y="205.5" width="288" height="181"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="shc-oO-B6g"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="shc-oO-B6g" firstAttribute="trailing" secondItem="UVw-1y-4E2" secondAttribute="trailing" constant="16" id="MeC-OK-jys"/>
+                            <constraint firstItem="shc-oO-B6g" firstAttribute="bottom" secondItem="UVw-1y-4E2" secondAttribute="bottom" constant="20" id="ZTb-jY-ExT"/>
+                            <constraint firstItem="UVw-1y-4E2" firstAttribute="leading" secondItem="shc-oO-B6g" secondAttribute="leading" constant="16" id="t0j-ob-Jhd"/>
+                            <constraint firstItem="UVw-1y-4E2" firstAttribute="top" secondItem="shc-oO-B6g" secondAttribute="top" constant="20" id="tRE-Uh-is9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Andrey Machulin" id="Rha-tc-vVN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YlK-ZB-OfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2288" y="844"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="vyM-Yk-BzK">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="tUb-o5-PUw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zmH-7r-Hwq">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EDh-Rj-b1s" kind="relationship" relationship="viewControllers" id="kSY-96-BM6"/>
+                        <segue destination="gZa-PN-Ke8" kind="relationship" relationship="viewControllers" id="63E-82-ph0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Sh-8p-P5w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1151" y="45"/>
+        </scene>
+        <!--About Me-->
+        <scene sceneID="2tZ-mN-g6n">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gZa-PN-Ke8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="About Me" image="moon" catalog="system" id="NTF-sz-ZTP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="r5n-ah-Kco">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eNJ-9Y-YwN" kind="relationship" relationship="rootViewController" id="tff-RM-gcV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSg-ty-QzU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1503.75" y="844.0140845070423"/>
         </scene>
     </scenes>
     <resources>
+        <image name="moon" catalog="system" width="128" height="123"/>
+        <image name="sun.min.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
