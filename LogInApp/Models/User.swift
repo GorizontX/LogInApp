@@ -10,6 +10,8 @@ struct User {
     let password: String
     let person: Person
     
+  
+    
     static func getUser() -> User {
         User(
             userName: "Andrey",
@@ -17,6 +19,29 @@ struct User {
             person: Person.getPerson()
         )
     }
+    
+//    static func getUser() -> [User] {
+//        [
+//            User(
+//                userName: "Andrey",
+//                password: "13579",
+//                person: Person(
+//                    name: "Andrey",
+//                    surname: "Machulin",
+//                    aboutMe: "About Andrey"
+//                )
+//            ),
+//             User(
+//                userName: "Eugenya",
+//                password: "24680",
+//                person: Person(
+//                    name: "Eugenya",
+//                    surname: "Bruyko",
+//                    aboutMe: "About Eugenya"
+//                )
+//            )
+//        ]
+//    }
     
 }
 
@@ -30,10 +55,7 @@ struct Person {
     }
     
     static func getPerson() -> Person {
-        Person(
-            name: "Andrey",
-            surname: "Machulin",
-            aboutMe: "Some text")
+        Person(name: "Andrey", surname: "Machulin", aboutMe: "About Andrey")
     }
-    
+        
 }
