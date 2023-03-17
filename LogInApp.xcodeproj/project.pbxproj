@@ -16,6 +16,8 @@
 		571B5A8A29BD1B0100DA155E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 571B5A8929BD1B0100DA155E /* WelcomeViewController.swift */; };
 		5747D8E029C289550021B18B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747D8DF29C289550021B18B /* User.swift */; };
 		5747D8E229C3C2590021B18B /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747D8E129C3C2590021B18B /* AboutMeViewController.swift */; };
+		5747D8E429C4EAD40021B18B /* AboutMyJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747D8E329C4EAD40021B18B /* AboutMyJobViewController.swift */; };
+		5747D8E629C4EAF40021B18B /* AboutAmiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5747D8E529C4EAF40021B18B /* AboutAmiViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		571B5A8929BD1B0100DA155E /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		5747D8DF29C289550021B18B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5747D8E129C3C2590021B18B /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		5747D8E329C4EAD40021B18B /* AboutMyJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMyJobViewController.swift; sourceTree = "<group>"; };
+		5747D8E529C4EAF40021B18B /* AboutAmiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAmiViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				571B5A7929BB8A8600DA155E /* LoginViewController.swift */,
 				571B5A8929BD1B0100DA155E /* WelcomeViewController.swift */,
 				5747D8E129C3C2590021B18B /* AboutMeViewController.swift */,
+				5747D8E329C4EAD40021B18B /* AboutMyJobViewController.swift */,
+				5747D8E529C4EAF40021B18B /* AboutAmiViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,10 +193,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5747D8E629C4EAF40021B18B /* AboutAmiViewController.swift in Sources */,
 				571B5A7A29BB8A8600DA155E /* LoginViewController.swift in Sources */,
 				571B5A8A29BD1B0100DA155E /* WelcomeViewController.swift in Sources */,
 				571B5A7629BB8A8600DA155E /* AppDelegate.swift in Sources */,
 				5747D8E029C289550021B18B /* User.swift in Sources */,
+				5747D8E429C4EAD40021B18B /* AboutMyJobViewController.swift in Sources */,
 				5747D8E229C3C2590021B18B /* AboutMeViewController.swift in Sources */,
 				571B5A7829BB8A8600DA155E /* SceneDelegate.swift in Sources */,
 			);
