@@ -8,16 +8,20 @@
 import UIKit
 
 class AboutAmiViewController: UIViewController {
-
+    
+    @IBOutlet var amiImageView: UIImageView!
     @IBOutlet var aboutAmiLabel: UILabel!
     
-    var aboutAmi = ""
+    var user: User!
     
+    // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        aboutAmiLabel.text = aboutAmi
-   
+        
+        aboutAmiLabel.text = user.person.aboutMyPet
+        amiImageView.layer.cornerRadius = 20
+        
     }
     
-
+    
 }

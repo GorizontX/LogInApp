@@ -13,6 +13,7 @@ class WelcomeViewController: UIViewController {
     
     var user: User!
     
+    // MARK: - Override Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.text = "Welcom, \(user.person.welcomeMessame)"
@@ -20,4 +21,3 @@ class WelcomeViewController: UIViewController {
     
     
 }
-    
