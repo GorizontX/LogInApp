@@ -22,11 +22,11 @@ class LoginViewController: UIViewController {
         guard let viewControllers = tabBarVC.viewControllers else { return }
         
         viewControllers.forEach { viewController in
-            if let firstVC = viewController as? WelcomeViewController {
-                firstVC.user = user
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
-                guard let secondVC = navigationVC.topViewController as? AboutMeViewController else { return }
-                secondVC.user = user
+                guard let aboutMeVC = navigationVC.topViewController as? AboutMeViewController else { return }
+                aboutMeVC.user = user
             }
         }
         
